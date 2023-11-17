@@ -28,8 +28,8 @@ services:
   nginx-unprivileged:
     image: nginxinc/nginx-unprivileged
     container_name: nginx-unprivileged
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     volumes:
       - www-html:/var/www/html
       - ./nginx-unprivileged-conf.d:/etc/nginx/conf.d
